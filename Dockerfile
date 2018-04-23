@@ -11,6 +11,9 @@ RUN apt-get update -qy && \
     apt-get update -qy && \
     apt-get install -qy ansible
 
+# Copy baked in playbooks
+COPY ansible /ansible
+
 # Add volume for Ansible playbooks
 VOLUME /ansible
 WORKDIR /ansible
